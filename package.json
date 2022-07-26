@@ -1,7 +1,7 @@
 {
   "name": "react-link-to-vscode",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "description": "this project provides a wrapper to display a link to the file path of a component on screen during development.",
   "license": "MIT",
