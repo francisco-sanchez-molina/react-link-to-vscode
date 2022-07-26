@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import process from "process";
+const process = require("process");
 
 const development: boolean = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
