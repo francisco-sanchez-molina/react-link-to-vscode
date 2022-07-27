@@ -25,3 +25,4 @@ Pressing the escape key will display the link to the file in vscode:
 
 <img width="473" alt="image" src="https://user-images.githubusercontent.com/9049706/181340665-aecec5bd-4e2d-45c0-9552-dba5fc0973ba.png">
 
+<img width="443" alt="image" src="https://user-images.githubusercontent.com/9049706/181340983-04f21d70-70eb-4d00-b597-4572d57cc806.png">
