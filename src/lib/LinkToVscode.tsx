@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
-import process from "process";
-
-const development: boolean = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+let development = false
+try {
+    development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+} catch (e) { }
 
 function isDev(): boolean {
     return development;
 }
 
 type Props = { children?: React.ReactNode }
-
 
 export const LinkToVscode: React.FC<Props> = isDev() ? ({ children }) => {
     const fileName = (children as any)?._source?.fileName
