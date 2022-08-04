@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from 'react'
-
-let development = false
-try {
-    development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
-} catch (e) { }
-
-function isDev(): boolean {
-    return development;
-}
+import { getFilename } from './getFilename';
+import { isDev } from './isDev';
 
 type Props = { children?: React.ReactNode }
 
 export const LinkToVscode: React.FC<Props> = isDev() ? ({ children }) => {
-    const fileName = (children as any)?._source?.fileName
-
     const [visible, setVisible] = useState(false)
     useEffect(() => {
         const listen = (e: KeyboardEvent) => {
@@ -25,6 +16,7 @@ export const LinkToVscode: React.FC<Props> = isDev() ? ({ children }) => {
         return () => document.removeEventListener('keydown', listen)
     }, [setVisible])
 
+    const fileName = getFilename(children)
     const showLink = visible && fileName
 
     return (
